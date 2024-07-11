@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: url();
+  background-size: cover;
+}
+
+.MusicSection {
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  width: 300px;
+  height: 900px;
+  display: grid;
+  background: url(./imgs/grd.jpg);
+  background-size: cover;
+  grid-template-columns: 1fr;
+  grid-template-rows: 170px 200px 1fr;
+}
+.Poster {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.playbtn {
+  padding: 0;
+  border-radius: 50%;
+  background: url("./imgs/play.png") no-repeat center center;
+  background-size: cover;
+
+  color: white;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.pausebtn {
+  padding: 0;
+  border-radius: 50%;
+  background: url("./imgs/pause.png") no-repeat center center;
+  background-size: cover;
+
+  color: white;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.stopbtn {
+  padding: 0%;
+  border-radius: 50%;
+  background: url("./imgs/stop.png") no-repeat center center;
+  background-size: cover;
+
+  color: white;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.btncontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slider {
+  width: 78%;
+  height: 10px;
+  border-radius: 10px;
+  background: #dded00;
+  outline: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.slider:hover {
+  background: #ccc;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:root {
+  --color: #7868e6;
+}
+.btn {
+  position: relative;
+  z-index: 0;
+  width: 85px;
+  height: 65px;
+  line-height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  color: bisque;
+  font-weight: 900;
+}
+
+.btn:hover {
+  color: wheat;
+  box-shadow: 0 0 5px var(--color), 0 0 25px var(--color);
+  background-color: var(--color);
+}
+
+.btn:hover::after {
+  transition: 0.3s;
+  background: var(--color);
+}
+
+.btn:hover::before {
+  transition: 0.3s;
+  background: var(--color);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  background-image: linear-gradient(var(--color), var(--color));
+  transform-origin: left top;
+  animation: rotates 2s linear infinite;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: #022129;
+  border-radius: 10px;
+}
+
+@keyframes rotates {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+p {
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  color: aliceblue;
+}

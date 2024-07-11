@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main></main>
+    <section class="MusicSection">
+      <img id="poster" src="#" class="Poster" width="100%" />
+
+      <div>
+        <audio src="Yas - Sefareshi-joyamusic.mp3" controls></audio>
+        <div class="panel">
+          <div class="btncontainer">
+            <button class="pausebtn" id="PauseBut"></button>
+            <button class="playbtn" id="PlayBut"></button>
+
+            <button class="stopbtn" id="StopBut"></button>
+          </div>
+          <div>
+            <input
+              class="slider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              id="Volume-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mlist" id="musicList"></div>
+    </section>
+  </body>
+</html>
